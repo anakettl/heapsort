@@ -1,6 +1,6 @@
 /**
  * @License
- * Copyright 2020 Bubble Sort Application
+ * Copyright 2020 Heap Sort Application
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,8 +26,12 @@ public class HeapSort {
 
     private Scanner scanner = new Scanner(System.in);
 
-    public void sort(int arr[])
-    {
+    /**
+     * Method to sort the array with HeapSort
+     *
+     * https://www.geeksforgeeks.org/heap-sort/
+     */
+    public void sort(int arr[]) {
         int n = arr.length;
 
         // Build heap (rearrange array)
@@ -46,10 +50,10 @@ public class HeapSort {
         }
     }
 
-    // To heapify a subtree rooted with node i which is
-    // an index in arr[]. n is size of heap
-    void heapify(int arr[], int n, int i)
-    {
+    /**
+     * To heapify a subtree rooted with node i which is an index in arr[]. n is size of heap
+     */
+    void heapify(int arr[], int n, int i) {
         int largest = i; // Initialize largest as root
         int l = 2 * i + 1; // left = 2*i + 1
         int r = 2 * i + 2; // right = 2*i + 2
@@ -73,6 +77,11 @@ public class HeapSort {
         }
     }
 
+    /**
+     * Reads the numbers of the array.
+     *
+     * @return the numbers of the array
+     */
     public int[] read() {
         int size = this.size();
         int[] values = new int[size];
@@ -83,15 +92,22 @@ public class HeapSort {
         return values;
     }
 
+    /**
+     * Reads the size of the array.
+     *
+     * @return the size of the array
+     */
     private int size() {
         System.out.print("Size of array: ");
         int size = Integer.valueOf(this.scanner.next());
         return size;
     }
 
-    /* A utility function to print array of size n */
-    static void printArray(int arr[])
-    {
+    /**
+     * A utility function to print array of size n
+     * @param arr the array
+     */
+    static void printArray(int arr[]) {
         int n = arr.length;
         for (int i = 0; i < n; ++i)
             System.out.print(arr[i] + " ");
