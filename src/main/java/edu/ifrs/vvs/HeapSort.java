@@ -27,7 +27,7 @@ public class HeapSort {
     private Scanner scanner = new Scanner(System.in);
 
     /**
-     * Method to sort the array with HeapSort
+     * Method to sort the array with HeapSort.
      *
      * https://www.geeksforgeeks.org/heap-sort/
      */
