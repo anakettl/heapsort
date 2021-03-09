@@ -79,4 +79,14 @@ class HeapSortTest {
         hs.sort(arrayTest);
         assertArrayEquals(arrayTest, arrayExpected);
     }
+
+    @Test
+    @SuppressWarnings("checkstyle:magicnumber")
+    void arrayWithRepeatedElements() {
+        int[] arrayTest = new int[]{2, 0, -9, 2, 0, 100, -287};
+        int[] arrayExpected = new int[]{-287, -9, 0, 0, 2, 2, 100};
+
+        hs.sort(arrayTest);
+        assertArrayEquals(arrayTest, arrayExpected);
+    }
 }
