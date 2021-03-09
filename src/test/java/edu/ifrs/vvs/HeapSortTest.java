@@ -58,7 +58,6 @@ class HeapSortTest {
 
         hs.sort(arrayTest);
         assertArrayEquals(arrayTest, arrayExpected);
-
     }
 
     @Test
