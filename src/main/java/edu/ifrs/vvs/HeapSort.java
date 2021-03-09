@@ -55,7 +55,7 @@ public class HeapSort {
     /**
      * To heapify a subtree rooted with node i which is an index in arr[]. n is size of heap
      */
-    @SuppressWarnings({"jacoco.complexity","jacoco.method","jacoco.branch"})
+    @SuppressWarnings({"jacoco.complexity", "jacoco.method", "jacoco.branch"})
     void heapify(int[] arr, int n, int i) {
         int largest = i; // Initialize largest as root
         int l = 2 * i + 1; // left = 2*i + 1
