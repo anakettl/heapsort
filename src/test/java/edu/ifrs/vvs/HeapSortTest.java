@@ -25,7 +25,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
  * Unit test for heap sort.
  */
 class HeapSortTest {
-    private HeapSort bs = new HeapSort();
+    private HeapSort hs = new HeapSort();
     /**
      * HeapSort Test.
      */
@@ -36,7 +36,7 @@ class HeapSortTest {
         int[] arrayTest = new int[] {1, 2, 0, 23};
         int[] arrayExpected = new int[] {0, 1, 2, 23};
 
-        bs.sort(arrayTest);
+        hs.sort(arrayTest);
         assertArrayEquals(arrayTest, arrayExpected);
     }
 
@@ -46,8 +46,19 @@ class HeapSortTest {
         int[] arrayTest = new int[] {-1, 2, 0, 23, 1, -2};
         int[] arrayExpected = new int[] {-2, -1, 0, 1, 2, 23};
 
-        bs.sort(arrayTest);
+        hs.sort(arrayTest);
         assertArrayEquals(arrayTest, arrayExpected);
+    }
+
+    @Test
+    @SuppressWarnings("checkstyle:magicnumber")
+    void arrayWithOnlyNegativesSort() {
+        int[] arrayTest = new int[]{-1, -22, -23, -10, -2, -90};
+        int[] arrayExpected = new int[]{-90, -23, -22, -10, -2, -1};
+
+        hs.sort(arrayTest);
+        assertArrayEquals(arrayTest, arrayExpected);
+
     }
 
     @Test
@@ -56,7 +67,17 @@ class HeapSortTest {
         int[] arrayTest = new int[5];
         int[] arrayExpected = new int[5];
 
-        bs.sort(arrayTest);
+        hs.sort(arrayTest);
+        assertArrayEquals(arrayTest, arrayExpected);
+    }
+
+    @Test
+    @SuppressWarnings("checkstyle:magicnumber")
+    void arrayWithOneElement() {
+        int[] arrayTest = new int[]{2};
+        int[] arrayExpected = new int[]{2};
+
+        hs.sort(arrayTest);
         assertArrayEquals(arrayTest, arrayExpected);
     }
 }
